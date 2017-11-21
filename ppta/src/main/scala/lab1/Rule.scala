@@ -1,8 +1,8 @@
 package lab1
 
-case class Rule(left: List[Symbol],
-           right: List[Symbol]) {
+case class Rule(left: Word,
+           right: Word) {
 
-  override def toString: String = left.mkString + " => " + right.mkString
+  override def toString: String = left + " => " + right
 
 }
