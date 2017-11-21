@@ -7,6 +7,10 @@ class Grammar(terminals: Set[Symbol],
 
   require((terminals & nonTerminals & Set(startSymbol)).isEmpty, "Duplicate symbols found")
 
-
+  override def toString: String =
+    s"""Terminals: ${terminals.mkString}
+      |NonTerminals: ${nonTerminals.mkString}
+      |Rules: ${rules.mkString("\n\t", ";\n\t", "")}
+      |Start symbol: $startSymbol""".stripMargin
 
 }
